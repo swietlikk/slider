@@ -1,9 +1,42 @@
-.slider {}
+:root {
+    --sliderHeight: 300px;
+}
+
+.slider {
+    background-color: red;
+}
 .slider .slider__slides {}
 .slider .slider__nav {}
 
-.slides {}
-.slides .slides__slide {}
+.slides {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: var(--sliderHeight);
+}
+.slides .slides__slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: var(--sliderHeight);
+}
+
+.slides .slides__slide:first-child {
+    background-color: gold;
+    width: 100%;
+    left: 0;
+}
+.slides .slides__slide:nth-child(2) {
+    background-color: silver;
+    width: 100%;
+    left: 100%;
+}
+.slides .slides__slide:last-child {
+    background-color: green;
+    width: 100%;
+    left: 200%;
+}
+
 .slides .slides__box {}
 .slides .slides__hdl {}
 .slides .slides__lead {}
