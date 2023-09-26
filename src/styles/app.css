@@ -1,0 +1,14 @@
+.slider {}
+.slider .slider__slides {}
+.slider .slider__nav {}
+
+.slides {}
+.slides .slides__slide {}
+.slides .slides__box {}
+.slides .slides__hdl {}
+.slides .slides__lead {}
+.slides .slides__link {}
+
+.slider-nav {}
+.slider-nav .slider-nav__btn {}
+.slider-nav .slider-nav__btn.slider-nav__btn--prev {}
