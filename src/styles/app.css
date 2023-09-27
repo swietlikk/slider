@@ -2,6 +2,22 @@
     --sliderHeight: 300px;
 }
 
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('../fonts/roboto-bold-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 .slider {
     background-color: red;
     font-family: sans-serif;
@@ -55,6 +71,9 @@
     /*animation-duration: 10s;*/
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .slides .slides__slide:first-child {
@@ -70,6 +89,7 @@
     width: 100%;
     left: 100%;
     animation-name: slide-2;
+    background-image: url('../images/slider2.webp');
 }
 
 .slides .slides__slide:last-child {
@@ -77,24 +97,35 @@
     width: 100%;
     left: 200%;
     animation-name: slide-3;
+    background-image: url('../images/slider3.webp');
 }
 
 .slides .slides__box {
-    padding: 10px;
+    padding: 10px 154px 10px 10px;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     bottom: 0;
     width: 100%;
-    box-sizing: content-box;
+    box-sizing: border-box;
+    color: white;
 }
 
 .slides .slides__hdl {
+    font-family: 'Roboto Bold', sans-serif;
 }
 
 .slides .slides__lead {
+    font-family: 'Roboto Light', sans-serif;
 }
 
 .slides .slides__link {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .slider-nav {
@@ -105,3 +136,4 @@
 
 .slider-nav .slider-nav__btn.slider-nav__btn--prev {
 }
+
