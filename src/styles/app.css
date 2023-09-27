@@ -6,8 +6,12 @@
     background-color: red;
     font-family: sans-serif;
 }
-.slider .slider__slides {}
-.slider .slider__nav {}
+
+.slider .slider__slides {
+}
+
+.slider .slider__nav {
+}
 
 .slides {
     position: relative;
@@ -15,27 +19,63 @@
     width: 100%;
     min-height: var(--sliderHeight);
 }
+
+@keyframes slide-1 {
+    0% { left: 0}
+    30% { left: 0}
+    45% {left: -100%}
+    75% { left: -100%}
+    90% { left: -200%}
+    100% { left: -200%}
+}
+
+@keyframes slide-2 {
+    0% { left: 100%}
+    30% { left: 100%}
+    45% { left: 0}
+    75% { left: 0}
+    90% { left: -100%}
+    100% { left: -100%}
+}
+
+@keyframes slide-3 {
+    0% { left: 200%}
+    30% { left: 200%}
+    45% {left: 100%}
+    75% { left: 100%}
+    90% { left: 0}
+    100% { left: 0}
+}
+
 .slides .slides__slide {
     position: absolute;
     top: 0;
     width: 100%;
     min-height: var(--sliderHeight);
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .slides .slides__slide:first-child {
     background-color: gold;
     width: 100%;
     left: 0;
+    animation-name: slide-1;
 }
+
 .slides .slides__slide:nth-child(2) {
     background-color: silver;
     width: 100%;
     left: 100%;
+    animation-name: slide-2;
 }
+
 .slides .slides__slide:last-child {
     background-color: green;
     width: 100%;
     left: 200%;
+    animation-name: slide-3;
 }
 
 .slides .slides__box {
@@ -46,10 +86,21 @@
     width: 100%;
     box-sizing: content-box;
 }
-.slides .slides__hdl {}
-.slides .slides__lead {}
-.slides .slides__link {}
 
-.slider-nav {}
-.slider-nav .slider-nav__btn {}
-.slider-nav .slider-nav__btn.slider-nav__btn--prev {}
+.slides .slides__hdl {
+}
+
+.slides .slides__lead {
+}
+
+.slides .slides__link {
+}
+
+.slider-nav {
+}
+
+.slider-nav .slider-nav__btn {
+}
+
+.slider-nav .slider-nav__btn.slider-nav__btn--prev {
+}
